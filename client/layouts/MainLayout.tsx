@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from '../components/Footer/Footer'
-import Header from '../components/Header/Header'
+import Footer from '../shared/Footer/Footer'
+import Header from '../shared/Header/Header'
 
 interface Props {
   children: any
@@ -10,7 +10,7 @@ const MainLayout = ({ children }: Props) => {
   return (
     <>
       <Header />
-      <div className="container">{children}</div>
+      {children}
       <Footer />
     </>
   )
