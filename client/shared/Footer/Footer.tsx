@@ -4,11 +4,7 @@ import styles from '../../styles/shared/Footer.module.scss'
 interface Props {}
 
 const Footer = (props: Props) => {
-  return (
-    <div className={styles.footer}>
-      <h1>Footer</h1>
-    </div>
-  )
+  return <div className={styles.footer}></div>
 }
 
 export default Footer

@@ -1,8 +1,111 @@
+@import "../global/mixins.scss";
+@import "../global/variables.scss";
 .header {
-  h1 {
-    color: red;
+  padding-top: 61px;
+  @media (max-width: $size-phone) {
+    padding-top: 36px;
   }
 }
 .nav_link {
-  color: #fff;
+  a {
+    color: #fff;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    opacity: 0.5;
+    transition: 0.1s;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    @media (min-width: $size-laptop) {
+      &:hover {
+        opacity: 1;
+      }
+    }
+    @media (max-width: $size-phone) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+.logo_wrapper {
+  max-width: 178px;
+  cursor: pointer;
+  @media (max-width: $size-phone) {
+    max-width: 142px;
+  }
+}
+.burger_btn {
+  display: none;
+  @media (max-width: $size-phone) {
+    display: block;
+    span,
+    span:after,
+    span:before {
+      border-radius: 7px;
+      display: block;
+      background: $clr-white;
+      content: "";
+      @include wh(25px, 3px);
+      min-width: 25px;
+      min-height: 3px;
+    }
+    span {
+      position: relative;
+      &:after,
+      &:before {
+        position: absolute;
+        left: calc(50% - 12.5px);
+        top: calc(50% - 1.5px);
+      }
+      &:after {
+        transition: 0.5s;
+        margin-top: 7px;
+      }
+      &:before {
+        transition: 0.5s;
+        margin-top: -7px;
+      }
+    }
+  }
+}
+.logo_img {
+  width: 100%;
+}
+.phone_num {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  color: $clr-white;
+  img {
+    display: none;
+  }
+  @media (max-width: $size-phone) {
+    content: "";
+    img {
+      @include wh(25px, 25px);
+      display: block;
+    }
+    span {
+      display: none;
+    }
+  }
+}
+.nav_links {
+  @include flex($justify: space-between, $wrap: wrap);
+  width: 518px;
+  @media (max-width: $size-phone) {
+    transition: 0.2s;
+    position: absolute;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.outer {
+  @include flex($justify: space-between, $wrap: wrap);
 }

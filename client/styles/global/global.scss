@@ -1,7 +1,40 @@
+@import "../global/reset.scss";
+@import "../global/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "../../public/fonts/GT Esti/GTEsti.scss";
 body {
-  background: #333;
+  font-family: $font-gt;
+  background: $clr-bg-blue;
+  color: $clr-white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
 }
-
+button {
+  border: none;
+  cursor: pointer;
+  &:hover {
+    border: none;
+  }
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: $clr-white;
+  &:hover {
+    text-decoration: none;
+  }
+}
+h1,
+h2 {
+  font-family: $font-montserrat;
+}
 .container {
   margin: 0 auto;
+  max-width: 1240px;
+  @media (max-width: $size-phone) {
+    padding: 0 15px;
+  }
 }

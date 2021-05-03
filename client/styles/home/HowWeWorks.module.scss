@@ -1,0 +1,150 @@
+@import "../global/variables.scss";
+@import "../global/mixins.scss";
+.how_we_works {
+  padding: 200px 0 170px 0;
+  position: relative;
+  @media (max-width: $size-phone) {
+    padding: 640px 0 78px 0;
+  }
+}
+.outer {
+  position: relative;
+  z-index: 3;
+  @include flex($justify: space-between, $wrap: wrap, $align: flex-start);
+  @media (max-width: $size-phone) {
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+}
+
+.title {
+  font-family: $font-montserrat;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 73px;
+  max-width: 592px;
+  @media (max-width: $size-phone) {
+    width: 100%;
+    margin-bottom: 47px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 44px;
+  }
+}
+.working_cards {
+  padding-top: 95px;
+  @include flex(column, $justify: flex-start, $wrap: nowrap, $align: flex-start);
+  background: transparent;
+  @media (max-width: $size-phone) {
+    padding-top: 0;
+  }
+}
+.card {
+  @include flex($justify: space-between, $wrap: nowrap, $align: flex-start);
+  max-width: 552px;
+  margin-bottom: 84px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  @media (max-width: $size-phone) {
+    margin-bottom: 58px;
+    @include flex(column, $justify: flex-start, $wrap: nowrap, $align: center);
+    text-align: center;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+.card_number {
+  color: $clr-green;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  margin-right: 18px;
+  @media (max-width: $size-phone) {
+    margin: 0px 0px 14px 0;
+  }
+}
+.card_content_wrapper {
+  @include flex(column, $justify: flex-start, $wrap: nowrap, $align: flex-start);
+  @media (max-width: $size-phone) {
+    align-items: center;
+  }
+}
+.card_title {
+  margin-bottom: 19px;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 140%;
+  @media (max-width: $size-phone) {
+    margin-bottom: 17px;
+    font-size: 24px;
+  }
+}
+.card_text {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 140%;
+  opacity: 0.6;
+  @media (max-width: $size-phone) {
+    font-size: 16px;
+  }
+}
+
+//ебаная блять рука сука нахуй
+
+.flying_hand {
+  @include wh(1104px, 1104px);
+  left: -95px;
+  top: 274px;
+  position: absolute;
+  pointer-events: none;
+  @media (max-width: $size-phone) {
+    @include wh(629px, 629px);
+    left: -184px;
+    top: 0;
+  }
+}
+.flying_hand__img {
+  @include wh(100%, 100%);
+  position: relative;
+  z-index: 2;
+}
+.flying_hand__ellipse_small {
+  @include wh(296px, 296px);
+  background: $clr-green;
+  opacity: 0.15;
+  filter: blur(200px);
+  position: absolute;
+  content: "";
+  left: 489px;
+  top: 292px;
+  z-index: 1;
+  @media (max-width: $size-phone) {
+    @include wh(168px, 168px);
+    opacity: 0.15;
+    filter: blur(150px);
+    left: 279px;
+    top: 168px;
+  }
+}
+.flying_hand__ellipse_big {
+  @include wh(641px, 641px);
+  content: "";
+  background: $clr-green;
+  opacity: 0.15;
+  filter: blur(200px);
+  position: absolute;
+  left: 279px;
+  top: 215px;
+  z-index: 1;
+  @media (max-width: $size-phone) {
+    @include wh(365px, 365px);
+    filter: blur(150px);
+    left: -195px;
+    top: 122px;
+  }
+}

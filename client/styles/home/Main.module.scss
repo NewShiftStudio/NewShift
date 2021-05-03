@@ -1,0 +1,67 @@
+@import "../global/variables.scss";
+@import "../global/mixins.scss";
+
+.main {
+  padding: 162px 0 278px 0;
+  @media (max-width: $size-phone) {
+    padding: 76px 0 593px 0;
+  }
+}
+.container {
+  overflow: visible;
+  position: relative;
+}
+.outer {
+  max-width: 714px;
+  @include flex(column, flex-start, flex-start);
+  @media (max-width: $size-phone) {
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.title,
+.title span {
+  font-family: $font-montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 110px;
+  min-height: 366px;
+  @media (max-width: $size-phone) {
+    min-height: 159px;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+    max-width: 312px;
+  }
+}
+.title {
+  margin-bottom: 70px;
+  span {
+    color: $clr-green;
+  }
+  @media (max-width: $size-phone) {
+    margin-bottom: 41px;
+  }
+}
+.flying_phone {
+  @include wh(1198px, 1198px);
+  position: absolute;
+  right: -427px;
+  top: -326px;
+  min-width: 1198px;
+  min-height: 1198px;
+  // pointer-events: none;
+  @media (max-width: $size-phone) {
+    min-width: 673px;
+    min-height: 673px;
+    @include wh(673px, 673px);
+    right: calc(50% - 336.5px);
+    top: auto;
+    bottom: -622px;
+  }
+}
+.flying_phone_mobile {
+  display: none;
+}

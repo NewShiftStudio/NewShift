@@ -1,0 +1,39 @@
+@import "../global/variables.scss";
+@import "../global/mixins.scss";
+.form_start_work {
+  padding: 171px 0 156px 0;
+}
+.outer {
+  @include flex($justify: space-between, $align: flex-start);
+}
+.text {
+  @include flex(column, $justify: flex-start, $align: flex-start);
+  max-width: 517px;
+}
+.title {
+  margin-bottom: 41px;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 73px;
+}
+.subtitle {
+  margin-bottom: 79px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 140%;
+}
+.mail {
+  color: $clr-green;
+  font-size: 30px;
+  position: relative;
+  line-height: 140%;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $clr-green;
+    bottom: -4px;
+  }
+}
