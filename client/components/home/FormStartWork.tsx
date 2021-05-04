@@ -25,22 +25,36 @@ const Header = ({}: Props) => {
               support@newshift.ru
             </a>
           </div>
-          <form className={formatClasses(buttons.btn_send)} action="">
-            <input className={formatClasses(styles.input_name)} type="text" />
-            <input className={formatClasses(styles.input_phone)} type="text" />
-            <div className={formatClasses('btn', styles.checkbox_wrapper)}>
-              <label className={styles.checkbox_label}>
+          <form className={formatClasses(styles.form)} action="">
+            <input
+              placeholder="Ваше имя"
+              className={formatClasses(styles.input)}
+              type="text"
+            />
+            <input
+              placeholder="Ваш телефон"
+              className={formatClasses(styles.input)}
+              type="tel"
+            />
+            <label className={formatClasses(styles.checkbox_part_wrapper)}>
+              <div className={styles.checkbox_wrapper}>
                 <input
                   className={formatClasses(styles.checkbox)}
                   type="checkbox"
                 />
-                <div className={formatClasses(styles.fake_checkbox)}></div>
-                <span className={formatClasses('btn', styles.checkbox_text)}>
-                  Заполняя форму я согласен на обработку персональных данных
-                </span>
-              </label>
-            </div>
-            <button className={formatClasses('btn', buttons.btn_form_send)}>
+                <div
+                  className={formatClasses(styles.fake_checkbox, 'selected')}
+                ></div>
+              </div>
+              <span className={formatClasses('btn', styles.checkbox_text)}>
+                Заполняя форму я согласен на обработку{' '}
+                <Link href="/privacy">персональных данных</Link>
+              </span>
+            </label>
+            <button
+              type="submit"
+              className={formatClasses('btn', buttons.btn_form_send)}
+            >
               Отправить заявку
             </button>
           </form>

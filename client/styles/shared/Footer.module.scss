@@ -1,3 +1,89 @@
+@import "../global/mixins.scss";
+@import "../global/variables.scss";
 .footer {
+  padding: 78px 0 40px;
+  @media (max-width: $size-phone) {
+    padding: 78px 0 40px;
+  }
+}
+.outer {
+  @include flex(column, $justify: flex-start);
+}
+.upper_part {
+  @include flex($justify: space-between, $wrap: wrap);
+  width: 100%;
+  padding-bottom: 78px;
+  border-bottom: 1px solid #1d3658;
+}
+.bottom_part {
+  @include flex(column, $justify: flex-start, $align: flex-start);
+  padding-top: 38px;
+  width: 100%;
+}
+.address {
   font-weight: normal;
+  font-size: 20px;
+  line-height: 140%;
+}
+.nav_links {
+  @include flex($justify: space-between, $wrap: wrap);
+  width: 100%;
+  margin-bottom: 54px;
+}
+.nav_link {
+  a {
+    color: #fff;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    transition: 0.1s;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    @media (min-width: $size-laptop) {
+      &:hover {
+        color: $clr-green;
+      }
+    }
+    @media (max-width: $size-phone) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+.info_blocks {
+  @include flex($justify: space-between, $wrap: wrap);
+  width: 100%;
+}
+.phone_num {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+}
+.info_block {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  opacity: 0.5;
+}
+.outer {
+  @include flex($justify: space-between, $wrap: wrap);
+}
+.cookie,
+.privacy {
+  @media (min-width: $size-laptop) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.social_btns {
+  width: 286px;
+
+  @include flex($justify: space-between, $wrap: wrap);
 }

@@ -5,7 +5,7 @@ import buttons from '../../styles/buttons/Buttons.module.scss'
 import { formatClasses } from '../../utils/formatClass'
 interface Props {}
 
-const Header = ({}: Props) => {
+const HowWeWorks = ({}: Props) => {
   const cards = [
     {
       title: 'Аудит проекта и анализ рынка',
@@ -70,4 +70,4 @@ const Header = ({}: Props) => {
   )
 }
 
-export default Header
+export default HowWeWorks

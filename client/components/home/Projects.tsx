@@ -5,7 +5,7 @@ import buttons from '../../styles/buttons/Buttons.module.scss'
 import { formatClasses } from '../../utils/formatClass'
 interface Props {}
 
-const Header = ({}: Props) => {
+const Projects = ({}: Props) => {
   const projects = [
     { src: './images/projects/mpro.png', link: '#' },
     { src: './images/projects/coinjoy.png', link: '#' },
@@ -72,4 +72,4 @@ const Header = ({}: Props) => {
   )
 }
 
-export default Header
+export default Projects

@@ -2,25 +2,48 @@
 @import "../global/mixins.scss";
 .form_start_work {
   padding: 171px 0 156px 0;
+  background: url(/images/shared/form-bg.png);
+  background-size: cover;
+  @media (max-width: $size-phone) {
+    background: #1d3658;
+    padding: 63px 0;
+  }
 }
 .outer {
-  @include flex($justify: space-between, $align: flex-start);
+  @include flex($justify: space-between, $align: flex-start, $wrap: wrap);
+  @media (max-width: $size-phone) {
+    text-align: center;
+  }
 }
 .text {
   @include flex(column, $justify: flex-start, $align: flex-start);
   max-width: 517px;
+  @media (max-width: $size-phone) {
+    max-width: 100%;
+    align-items: center;
+  }
 }
+
 .title {
   margin-bottom: 41px;
-  font-weight: 800;
   font-size: 60px;
+  font-weight: 800;
   line-height: 73px;
+  @media (max-width: $size-phone) {
+    margin-bottom: 28px;
+    line-height: 44px;
+    font-size: 36px;
+  }
 }
 .subtitle {
   margin-bottom: 79px;
   font-weight: normal;
   font-size: 20px;
   line-height: 140%;
+  @media (max-width: $size-phone) {
+    margin-bottom: 25px;
+    font-size: 16px;
+  }
 }
 .mail {
   color: $clr-green;
@@ -31,9 +54,106 @@
     content: "";
     position: absolute;
     left: 0;
-    width: 100%;
-    height: 3px;
     background: $clr-green;
     bottom: -4px;
+    @include wh(100%, 3px);
+  }
+  @media (max-width: $size-phone) {
+    font-size: 24px;
+    line-height: 140%;
+  }
+}
+.form {
+  @include flex(column, $justify: flex-start, $align: flex-start);
+  max-width: 517px;
+  padding-top: 95px;
+  @media (max-width: $size-phone) {
+    padding-top: 60px;
+    align-items: center;
+  }
+}
+
+.input {
+  color: #8e9bab;
+  font-size: 30px;
+  line-height: 140%;
+  position: relative;
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding-bottom: 13px;
+  border-bottom: 2px solid #8e9bab;
+  &::placeholder {
+    opacity: 1;
+    color: #8e9bab;
+  }
+  &:first-of-type {
+    margin-bottom: 63px;
+  }
+  &:last-of-type {
+    margin-bottom: 39px;
+  }
+  @media (max-width: $size-phone) {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 17px;
+    &:first-of-type {
+      margin-bottom: 46px;
+    }
+    &:last-of-type {
+      margin-bottom: 31px;
+    }
+  }
+}
+.checkbox_part_wrapper {
+  @include flex($justify: flex-start);
+  margin-bottom: 41px;
+  cursor: pointer;
+  @media (max-width: $size-phone) {
+    align-items: flex-start;
+    margin-bottom: 37px;
+  }
+}
+.checkbox_text {
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: normal;
+  a {
+    border-bottom: 1px solid $clr-white;
+  }
+  @media (max-width: $size-phone) {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+.checkbox {
+  position: absolute;
+  content: "";
+  right: 0;
+  left: 0;
+  opacity: 0;
+  @include wh(25px, 25px);
+}
+.checkbox_wrapper {
+  position: relative;
+  margin-right: 20px;
+  @include wh(25px, 25px);
+  @media (max-width: $size-phone) {
+    margin-right: 17px;
+  }
+}
+.fake_checkbox {
+  @include wh(25px, 25px);
+  border: 1px solid $clr-white;
+  box-sizing: border-box;
+  border-radius: 6px;
+  &:after {
+    content: "";
+    position: absolute;
+    border-radius: 4px;
+    background: $clr-green;
+    @include wh(13px, 13px);
+    left: calc(50% - 6.5px);
+    top: calc(50% - 6.5px);
   }
 }

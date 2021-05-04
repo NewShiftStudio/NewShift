@@ -4,6 +4,7 @@
   font-weight: 800;
   font-size: 58px;
   line-height: 71px;
+  margin-bottom: 58px;
   font-family: $font-montserrat;
   @media (max-width: $size-phone) {
     margin-bottom: 25px;
@@ -43,7 +44,7 @@
   @media (min-width: 1366px) {
     justify-content: space-between;
     flex-wrap: wrap;
-    height: 1805px;
+    height: 1865px;
   }
   @media (max-width: $size-phone) {
     justify-content: center;
@@ -70,7 +71,6 @@
       margin-top: 175px;
     }
     &:nth-of-type(6) {
-      // margin-top: 80px;
       height: 196px;
     }
   }

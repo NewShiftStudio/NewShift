@@ -5,7 +5,7 @@ import buttons from '../../styles/buttons/Buttons.module.scss'
 import { formatClasses } from '../../utils/formatClass'
 interface Props {}
 
-const Header = ({}: Props) => {
+const Main = ({}: Props) => {
   return (
     <section className={formatClasses(styles.main)}>
       <div className={formatClasses('container', styles.container)}>
@@ -27,4 +27,4 @@ const Header = ({}: Props) => {
   )
 }
 
-export default Header
+export default Main
