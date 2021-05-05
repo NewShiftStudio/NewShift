@@ -1,5 +1,35 @@
 @import "../global/variables.scss";
 @import "../global/mixins.scss";
+.projects {
+  position: relative;
+}
+.flying_ellipse {
+  display: none;
+  pointer-events: none;
+  z-index: -1;
+  @media (min-width: $size-laptop) {
+    position: absolute;
+    display: block;
+    @include wh(979px, 979px);
+    background: $clr-green;
+    opacity: 0.15;
+    filter: blur(447px);
+    border-radius: 50%;
+    top: -617px;
+    left: -408px;
+    &:after {
+      content: "";
+      position: absolute;
+      @include wh(450px, 450px);
+      border-radius: 50%;
+      background: $clr-green;
+      opacity: 0.15;
+      filter: blur(447px);
+      left: 221px;
+      top: 213px;
+    }
+  }
+}
 .title {
   font-weight: 800;
   font-size: 58px;

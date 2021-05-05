@@ -11,6 +11,14 @@
   font-weight: bold;
   font-size: 16px;
   letter-spacing: 0.1em;
+  @media (min-width: $size-laptop) {
+    transition: 0.1s;
+    &:hover {
+      background: $clr-white;
+      color: $clr-green-2;
+      box-shadow: 0px 33px 52px -18px rgba($clr-white, 0.41);
+    }
+  }
   @media (max-width: $size-phone) {
     @include wh(220px, 65px);
     font-size: 13px;
@@ -47,6 +55,14 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
+  @media (min-width: $size-laptop) {
+    transition: 0.1s;
+    &:hover {
+      background: $clr-white;
+      color: $clr-green-2;
+      box-shadow: 0px 33px 52px -18px rgba($clr-white, 0.41);
+    }
+  }
   @media (max-width: $size-phone) {
     @include wh(220px, 65px);
     line-height: 15px;

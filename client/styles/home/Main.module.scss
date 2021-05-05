@@ -49,10 +49,11 @@
   @include wh(1198px, 1198px);
   position: absolute;
   right: -427px;
+  pointer-events: none;
+
   top: -326px;
   min-width: 1198px;
   min-height: 1198px;
-  // pointer-events: none;
   @media (max-width: $size-phone) {
     min-width: 673px;
     min-height: 673px;
@@ -64,4 +65,5 @@
 }
 .flying_phone_mobile {
   display: none;
+  pointer-events: none;
 }

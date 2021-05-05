@@ -6,12 +6,13 @@ import HowWeWorks from '../components/home/HowWeWorks'
 import FormStartWork from '../components/home/FormStartWork'
 import Footer from '../shared/Footer/Footer'
 import Header from '../shared/Header/Header'
+import { formatClasses } from '../utils/formatClass'
 interface Props {}
 
 const Home = ({}: Props) => {
   return (
     <>
-      <div className={styles.global_wrapper}>
+      <div className={formatClasses(styles.global_wrapper)}>
         <Header />
         <Main />
         <Projects />

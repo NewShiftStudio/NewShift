@@ -14,6 +14,7 @@ const Projects = ({}: Props) => {
   ]
   return (
     <section className={formatClasses(styles.projects)}>
+      <div className={styles.flying_ellipse}></div>
       <div className={formatClasses('container', styles.container)}>
         <div className={formatClasses(styles.outer)}>
           <div className={formatClasses('block', styles.block)}>
